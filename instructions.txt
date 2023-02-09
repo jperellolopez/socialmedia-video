@@ -28,6 +28,9 @@ On the same file, wrap all the returned app inside <GoogleOAuthProvider> tags, p
 DEPLOYMENT
 create a git repository and upload to github
 open vercel, add the repository, add env variables
+type `npm install --legacy-peer-deps` on "install command" text area. Deploy the project
+copy the final url and paste it into: dashboard > settings > env variables > value textfield. Add NEXT_PUBLIC_BASE_URL as key name
+push the project one last time, so vercel detects the changes and applies the new env variable.
 
 Initialize
 -- cd to sanity-backend, run: npm run dev
