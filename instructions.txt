@@ -1,0 +1,33 @@
+TikTok clone app with NextJS and Typescript, and Sanity backend.
+
+PROJECT SETUP
+Open a terminal on root folder and run: npx create-next-app@latest ./ --ts 
+Run: npm install -g @sanity/cli
+Run: sanity init --coupon javascriptmastery2022
+- Options: insert the project name (sanity-backend) and use typescript. 
+
+BACKEND SETUP
+Go to sanity-backend/schemas and create the schemas here. The field type "reference" is used to establish relationships between two other schemas (ex: users and comments). Import the shemas to the index file and put them into the brackets. 
+
+FRONTEND SETUP
+Go to the root folder, package.json and put the correct dependencies version.
+Then run a terminal: npm install --legacy-peer-deps
+Then run: npm install --save-dev typescript @types/node --legacy-peer-deps
+
+STYLES SETUP
+Delete the Home.module.css file on the styles folder, keep globals.css and add a custom css. 
+Then install Tailwind running:  npm install -D tailwindcss postcss autoprefixer --legacy-peer-deps
+Then run: 'npx tailwindcss init -p'. It will create some config files. 
+On tailwind.config.js create the tailwind config if required
+
+GOOGLE AUTH
+Install required packages: 'npm install @react-oauth/google jwt-decode --legacy-peer-deps'
+On the _app.tsx file, import: 'import { GoogleOAuthProvider } from '@react-oauth/google'
+On the same file, wrap all the returned app inside <GoogleOAuthProvider> tags, passing the clientId as a parameter. Client ID can be found at: console.cloud.google.com > click on top > create new project > name and create. Open the project, expand sidebar, go to APIs and services, credentials. Click on 'Oauth consent screen' > external > create > enter name and email > save and continue (3 times). Go to Credentials > create credentials > Oauth Client Id > select Web application > insert name > Add URI (authorized javascript origins & authorized redirect URIs) > add http://localhost and http://localhost:3000 > create > copy client ID > add as an env variable
+
+DEPLOYMENT
+
+
+Initialize
+-- cd to sanity-backend, run: npm run dev
+-- in root folder, run: npm run dev
