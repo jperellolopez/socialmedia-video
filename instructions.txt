@@ -26,7 +26,8 @@ On the _app.tsx file, import: 'import { GoogleOAuthProvider } from '@react-oauth
 On the same file, wrap all the returned app inside <GoogleOAuthProvider> tags, passing the clientId as a parameter. Client ID can be found at: console.cloud.google.com > click on top > create new project > name and create. Open the project, expand sidebar, go to APIs and services, credentials. Click on 'Oauth consent screen' > external > create > enter name and email > save and continue (3 times). Go to Credentials > create credentials > Oauth Client Id > select Web application > insert name > Add URI (authorized javascript origins & authorized redirect URIs) > add http://localhost and http://localhost:3000 > create > copy client ID > add as an env variable
 
 DEPLOYMENT
-
+create a git repository and upload to github
+open vercel, add the repository, add env variables
 
 Initialize
 -- cd to sanity-backend, run: npm run dev
